@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const PageNavbar = () => {
+  // TO DO: FIX THE WIDTH-CHANGING BUG(DELETE THE INLINE STYLE WHEN WIDTH > 992px)
   const containerRef = useRef(null);
   const linksRef = useRef(null);
   const navRef = useRef(null);
@@ -62,6 +63,13 @@ const PageNavbar = () => {
             <Link to="/about">
               <button className="btn" onClick={() => setShowDropdown(false)}>
                 about
+              </button>
+            </Link>
+          </li>
+          <li className="link-item">
+            <Link to="/allprojects">
+              <button className="btn" onClick={() => setShowDropdown(false)}>
+                projects
               </button>
             </Link>
           </li>

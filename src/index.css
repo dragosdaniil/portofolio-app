@@ -183,6 +183,7 @@ header {
 .link-item {
   margin: 10px;
   height: 100%;
+  transition: var(--transition2);
 }
 .link-item:hover {
   border-bottom-color: var(--turquoise12);
@@ -421,6 +422,6 @@ header {
 
   .leftInfo,
   .rightInfo {
-    left: none;
+    transform: none;
   }
 }

@@ -6,9 +6,9 @@ const AllProjects = () => {
   return (
     <main className="page">
       <FeaturedProjects title="All Projects" />
-      <Link to="/">
+      {/* <Link to="/">
         <button className="projects-btn btn">home</button>
-      </Link>
+      </Link> */}
     </main>
   );
 };
