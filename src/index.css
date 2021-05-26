@@ -34,7 +34,7 @@
   --turquoise16: rgba(162, 244, 250, 0.623);
   --red1: rgb(163, 7, 7);
   --shadow1: 3px 3px 7px rgba(0, 0, 0, 0.8);
-  --shadow2: 3px 3px 7px rgba(0, 0, 0, 0.5);
+  --shadow2: 2px 2px 10px rgba(0, 0, 0, 0.4);
   --shadow3: 2px 2px 7px rgba(0, 0, 0, 0.2);
   --transition: all 0.6s linear;
   --transition2: all 0.3s linear;
@@ -82,6 +82,7 @@ h3,
 h4 {
   text-transform: capitalize;
   margin: 5px auto;
+  letter-spacing: 1px;
 }
 h1 {
   font-size: 3rem;
@@ -92,11 +93,17 @@ header {
   text-align: center;
 }
 
-.underline1 {
+.underline1,
+.underline2 {
   height: 5px;
   background-color: var(--turquoise15);
   width: 10rem;
   margin: 0 auto;
+}
+
+.underline2 {
+  height: 2px;
+  width: 6rem;
 }
 
 .btn {
@@ -424,4 +431,121 @@ header {
   .rightInfo {
     transform: none;
   }
+}
+
+/* =============
+      ABOUT
+==================*/
+.about-page {
+  padding: 5px;
+  min-height: calc(100vh - 8rem);
+  display: grid;
+  place-items: center;
+}
+.about-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  place-items: center;
+  height: 100%;
+}
+
+.hero-svg-about {
+  height: 400px;
+}
+
+.info {
+  margin: 2rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: rgb(80, 80, 80);
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  height: 2rem;
+  width: 4rem;
+  background-color: grey;
+}
+
+@media screen and (max-width: 992px) {
+  .about-center {
+    grid-template-columns: auto;
+  }
+}
+
+/* ==============
+      CONTACT
+=================*/
+
+.contact-page {
+  height: calc(100vh - 8rem);
+  display: grid;
+  place-items: center;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+.contact-form {
+  background-color: white;
+  row-gap: 0.8rem;
+  width: 500px;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow2);
+}
+
+.form-btn {
+  width: 100%;
+  background-color: var(--turquoise11);
+  height: 3rem;
+  color: var(--turquoise2);
+}
+
+.form-btn:hover {
+  background-color: var(--turquoise7);
+  color: white;
+}
+
+.form-label {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--turquoise11);
+}
+
+.form-input {
+  height: 2.5rem;
+  border-style: none;
+  background-color: rgb(227, 245, 250);
+}
+
+.form-input::placeholder {
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.message {
+  border-style: none;
+  background-color: rgb(227, 245, 250);
+}
+.message::placeholder {
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.form-container h2 {
+  color: var(--turquoise11);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
