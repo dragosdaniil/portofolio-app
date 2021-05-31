@@ -1,8 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
+import dataset from "./data";
 
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
-  return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
+  const [data, setData] = useState(dataset.content);
+
+  return <AppContext.Provider value={{ data }}>{children}</AppContext.Provider>;
 };
 
 export const useGlobalContext = () => {

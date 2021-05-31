@@ -1,10 +1,11 @@
 import React from "react";
 import Project from "./Project";
 import { Link } from "react-router-dom";
-
-const data = ["1", "2", "3"];
+import { useGlobalContext } from "../context";
 
 const FeaturedProjects = ({ title }) => {
+  const { data } = useGlobalContext();
+
   const pageTitle = title || "Featured Projects";
   return (
     <section className="featured-projects">
@@ -16,11 +17,21 @@ const FeaturedProjects = ({ title }) => {
         {data.map((item, index) => {
           if (index % 2 === 0) {
             return (
-              <Project infoSide="rightInfo" imgSide="leftImg" key={index} />
+              <Project
+                infoSide="rightInfo"
+                imgSide="leftImg"
+                key={index}
+                {...item}
+              />
             );
           } else {
             return (
-              <Project infoSide="leftInfo" imgSide="rightImg" key={index} />
+              <Project
+                infoSide="leftInfo"
+                imgSide="rightImg"
+                key={index}
+                {...item}
+              />
             );
           }
         })}

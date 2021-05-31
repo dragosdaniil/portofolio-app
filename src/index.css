@@ -380,6 +380,10 @@ header {
   width: 700px;
   background-color: grey;
 }
+.img-container img {
+  height: inherit;
+  width: inherit;
+}
 
 .img-overlay {
   top: 0;
@@ -396,7 +400,7 @@ header {
 }
 
 .leftInfo {
-  transform: translateX(-3%);
+  transform: translateX(-30%);
 }
 
 .rightInfo {
@@ -465,13 +469,18 @@ header {
 
 .tag-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .tag {
+  display: flex;
   height: 2rem;
-  width: 4rem;
-  background-color: grey;
+  padding: 10px;
+  margin: 0 0.5rem;
+  border-radius: var(--borderRadius);
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(211, 209, 209);
 }
 
 @media screen and (max-width: 992px) {
