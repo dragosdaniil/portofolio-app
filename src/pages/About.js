@@ -27,9 +27,6 @@ const About = () => {
               enim et mollitia dolor dolores, nemo quaerat. Modi, quam dolor
               vero dignissimos quaerat culpa dolorem. Consequatur?
             </p>
-            <ul className="tag-list">
-              <li className="tag"></li>
-            </ul>
           </article>
         </div>
       </section>
