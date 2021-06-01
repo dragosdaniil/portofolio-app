@@ -540,7 +540,7 @@ header {
 .contact-form {
   background-color: white;
   row-gap: 0.8rem;
-  width: 500px;
+  width: 35vw;
   border-radius: 0.5rem;
   box-shadow: var(--shadow2);
 }
@@ -588,4 +588,10 @@ header {
 .form-container h2 {
   color: var(--turquoise11);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 640px) {
+  .contact-form {
+    width: 80vw;
+  }
 }
