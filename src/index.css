@@ -67,6 +67,7 @@ h4 {
   text-transform: capitalize;
   margin: 5px auto;
   letter-spacing: 1px;
+  color: var(--turquoise13);
 }
 h1 {
   font-size: 3rem;
@@ -81,13 +82,13 @@ header {
   height: 5px;
   width: 10rem;
   margin: 0 auto;
-  background-color: var(--turquoise15);
+  background-color: var(--turquoise13);
 }
 
 .underline2 {
   height: 2px;
   width: 4rem;
-  background-color: var(--turquoise15);
+  background-color: var(--turquoise13);
   transition: var(--transition2);
   margin: 0 auto;
 }
