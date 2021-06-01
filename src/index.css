@@ -1,37 +1,21 @@
 :root {
-  --blue0: rgb(235, 245, 255);
-  --blue1: rgb(193, 218, 247);
-  --blue2: rgb(167, 204, 247);
-  --blue3: rgb(142, 191, 247);
-  --blue4: rgb(116, 178, 250);
-  --blue5: rgb(95, 168, 250);
-  --blue6: rgb(65, 154, 255);
-  --blue7: rgb(50, 146, 255);
-  --blue8: rgb(32, 136, 255);
-  --blue9: rgb(10, 125, 255);
-  --blue10: rgb(0, 97, 207);
-  --blue11: rgb(0, 75, 160);
-  --blue12: rgb(0, 63, 134);
-  --blue13: rgb(0, 48, 104);
-  --blue14: rgb(0, 33, 71);
-  --blue15: rgb(0, 17, 37);
-  --turquoise0: rgb(235, 252, 255);
-  --turquoise1: rgb(193, 239, 247);
-  --turquoise2: rgb(167, 235, 247);
-  --turquoise3: rgb(142, 235, 247);
-  --turquoise4: rgb(116, 219, 250);
-  --turquoise5: rgb(114, 232, 253);
-  --turquoise6: rgb(122, 235, 255);
-  --turquoise7: rgb(47, 211, 233);
-  --turquoise8: rgb(32, 229, 255);
-  --turquoise9: rgb(10, 224, 240);
-  --turquoise10: rgb(0, 193, 207);
-  --turquoise11: rgb(0, 141, 160);
-  --turquoise12: rgb(0, 114, 134);
-  --turquoise13: rgb(0, 88, 104);
-  --turquoise14: rgb(0, 54, 71);
-  --turquoise15: rgb(0, 30, 37);
-  --turquoise16: rgba(162, 244, 250, 0.623);
+  --turquoise0: hsl(189, 100%, 96%);
+  --turquoise1: hsl(189, 77%, 86%);
+  --turquoise2: hsl(189, 83%, 81%);
+  --turquoise3: hsl(187, 87%, 76%);
+  --turquoise4: hsl(194, 93%, 72%);
+  --turquoise5: hsl(189, 97%, 72%);
+  --turquoise6: hsl(189, 100%, 74%);
+  --turquoise7: hsl(187, 81%, 55%);
+  --turquoise8: hsl(187, 62%, 50%);
+  --turquoise9: hsl(184, 90%, 40%);
+  --turquoise10: hsl(184, 93%, 42%);
+  --turquoise11: hsl(187, 94%, 28%);
+  --turquoise12: hsl(189, 94%, 19%);
+  --turquoise13: hsl(189, 97%, 15%);
+  --turquoise14: hsl(194, 100%, 14%);
+  --turquoise15: hsl(191, 100%, 7%);
+  --turquoise16: hsla(184, 90%, 81%, 0.623);
   --red1: rgb(163, 7, 7);
   --shadow1: 3px 3px 7px rgba(0, 0, 0, 0.8);
   --shadow2: 2px 2px 10px rgba(0, 0, 0, 0.4);
@@ -367,11 +351,31 @@ header {
 
 .project-info {
   position: absolute;
+  display: grid;
   top: 10%;
   height: 400px;
   width: 650px;
   background-color: white;
   z-index: 5;
+  border-radius: var(--borderRadius);
+  padding: 1.5rem;
+}
+.project-info p {
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  color: var(--turquoise11);
+}
+
+.project-info h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--turquoise10);
+}
+
+.project-info h5 {
+  font-size: 1rem;
+  color: var(--turquoise10);
+  font-weight: 500;
 }
 
 .img-container {
@@ -383,6 +387,7 @@ header {
 .img-container img {
   height: inherit;
   width: inherit;
+  border-radius: var(--borderRadius);
 }
 
 .img-overlay {
@@ -395,6 +400,16 @@ header {
   transition: var(--transition2);
 }
 
+.button-container {
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-info a:hover {
+  cursor: pointer;
+}
 .project:hover .img-overlay {
   background-color: transparent;
 }

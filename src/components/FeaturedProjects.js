@@ -22,6 +22,7 @@ const FeaturedProjects = ({ title }) => {
                 imgSide="leftImg"
                 key={index}
                 {...item}
+                projectNum={index + 1}
               />
             );
           } else {
@@ -31,6 +32,7 @@ const FeaturedProjects = ({ title }) => {
                 imgSide="rightImg"
                 key={index}
                 {...item}
+                projectNum={index + 1}
               />
             );
           }

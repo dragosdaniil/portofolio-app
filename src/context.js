@@ -3,7 +3,11 @@ import dataset from "./data";
 
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
-  const [data, setData] = useState(dataset.content);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(dataset.content);
+  }, []);
 
   return <AppContext.Provider value={{ data }}>{children}</AppContext.Provider>;
 };

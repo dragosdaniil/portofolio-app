@@ -1,6 +1,18 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
-const Project = ({ infoSide, imgSide, image, description, title, tags }) => {
+const Project = ({
+  infoSide,
+  imgSide,
+  image,
+  description,
+  title,
+  tags,
+  projectNum,
+  gitLink,
+  projectLink,
+}) => {
   return (
     <article className="project">
       <div className="project-center">
@@ -9,12 +21,20 @@ const Project = ({ infoSide, imgSide, image, description, title, tags }) => {
           <div className="img-overlay"></div>
         </div>
         <div className={`project-info ${infoSide}`}>
-          <h4>{title}</h4>
+          <h3>{`${projectNum}. ${title}`}</h3>
           <p>{description}</p>
           <div className="tag-list">
             {tags.map((tag, index) => {
-              return <p className="tag">{tag}</p>;
+              return <h5 className="tag">{tag}</h5>;
             })}
+          </div>
+          <div className="button-container">
+            <a href={gitLink}>
+              <FaGithub />
+            </a>
+            <a href={projectLink}>
+              <FiExternalLink />
+            </a>
           </div>
         </div>
       </div>
