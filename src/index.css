@@ -448,7 +448,7 @@ header {
   .project-info {
     position: relative;
     width: 90vw;
-    height: 45vh;
+    min-height: 45vh;
   }
 
   .leftImg,
