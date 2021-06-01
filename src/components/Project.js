@@ -17,7 +17,7 @@ const Project = ({
     <article className="project">
       <div className="project-center">
         <div className={`img-container ${imgSide}`}>
-          <img src={image} alt="image" />
+          <img src={image} alt="" />
           <div className="img-overlay"></div>
         </div>
         <div className={`project-info ${infoSide}`}>
@@ -25,7 +25,11 @@ const Project = ({
           <p>{description}</p>
           <div className="tag-list">
             {tags.map((tag, index) => {
-              return <h5 className="tag">{tag}</h5>;
+              return (
+                <h5 className="tag" key={index}>
+                  {tag}
+                </h5>
+              );
             })}
           </div>
           <div className="button-container">

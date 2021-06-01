@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { useGlobalContext } from "../context";
 
 const PageNavbar = () => {
   // TO DO: FIX THE WIDTH-CHANGING BUG(DELETE THE INLINE STYLE WHEN WIDTH > 992px)

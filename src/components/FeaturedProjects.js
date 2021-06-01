@@ -1,6 +1,5 @@
 import React from "react";
 import Project from "./Project";
-import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 
 const FeaturedProjects = ({ title }) => {
