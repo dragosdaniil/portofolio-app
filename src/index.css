@@ -310,6 +310,14 @@ header {
   background-color: var(--turquoise14);
 }
 
+@media screen and (max-width: 640px) {
+  .service {
+    height: 30vh;
+    width: 60vw;
+    margin: 10px;
+  }
+}
+
 /* ===========================
             Projects
   ============================= */
@@ -346,43 +354,45 @@ header {
 ================*/
 .project {
   position: relative;
-  margin: 2rem 0;
+  margin: 2em 0;
 }
 
 .project-info {
   position: absolute;
   display: grid;
   top: 10%;
-  height: 400px;
-  width: 650px;
+  height: 40vh;
+  width: 35vw;
   background-color: white;
   z-index: 5;
   border-radius: var(--borderRadius);
-  padding: 1.5rem;
+  padding: 1.5em;
+  box-shadow: var(--shadow3);
 }
 .project-info p {
-  font-size: 1.3rem;
+  font-size: 1.1em;
   letter-spacing: 1.5px;
   color: var(--turquoise11);
 }
 
 .project-info h3 {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 500;
   color: var(--turquoise10);
 }
 
 .project-info h5 {
-  font-size: 1rem;
+  font-size: 1em;
   color: var(--turquoise10);
   font-weight: 500;
 }
 
 .img-container {
   position: relative;
-  height: 500px;
-  width: 700px;
+  height: 50vh;
+  width: 40vw;
   background-color: grey;
+  box-shadow: var(--shadow2);
 }
 .img-container img {
   height: inherit;
