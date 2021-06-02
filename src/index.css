@@ -160,7 +160,7 @@ header {
 .links-container {
   width: 40%;
   padding-right: 1.5rem;
-  height: 4rem;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -179,7 +179,7 @@ header {
   transition: var(--transition2);
 }
 .link-item:hover {
-  border-bottom-color: var(--turquoise12);
+  border-bottom-color: var(--turquoise10);
   border-bottom-style: solid;
   border-bottom-width: 3px;
 }

@@ -34,6 +34,7 @@ import "./index.css";
   *KNOWN BUGS*
   - When the window is enlarged with dropdown open, the height is that
   of the dropdown, not the nav
+  - clunky animation on navbar links underline => gotta investigate that later
 */
 
 function App() {

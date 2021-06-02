@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 
 const PageNavbar = () => {
   // TO DO: FIX THE WIDTH-CHANGING BUG(
-  // IF I CHANGE THE WINDOW SIZE WHEN THE ANAVBAR IS OPEN, SHOWDROPDOWN REMAINS TRUE
+  // IF I CHANGE THE WINDOW SIZE WHEN THE ANAVBAR IS OPEN
   const containerRef = useRef(null);
   const linksRef = useRef(null);
   const navRef = useRef(null);
