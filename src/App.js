@@ -25,15 +25,16 @@ import "./index.css";
 
   Gather Images for Project/About/Service displays =>
 
-  Create Contact Form => connect form to 3rd party?
+  Create Contact Form => connect form to 3rd party? Nah, I will do it myself once I learn
+  // node JS
 
-  Gather data =>
-  Create data api => post on screen =>
+  Gather data => tis done
 
   Test website for BUGS
   *KNOWN BUGS*
   - When the window is enlarged with dropdown open, the height is that
   of the dropdown, not the nav
+  - clunky animation on navbar links underline => gotta investigate that later
 */
 
 function App() {

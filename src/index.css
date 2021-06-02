@@ -82,13 +82,13 @@ header {
   height: 5px;
   width: 10rem;
   margin: 0 auto;
-  background-color: var(--turquoise13);
+  background-color: var(--turquoise11);
 }
 
 .underline2 {
   height: 2px;
   width: 4rem;
-  background-color: var(--turquoise13);
+  background-color: var(--turquoise11);
   transition: var(--transition2);
   margin: 0 auto;
 }
@@ -221,6 +221,10 @@ header {
     display: flex;
     padding: 5px;
   }
+<<<<<<< HEAD
+=======
+  /* CHANGED LINKS CONTAINER TO DROPDOWN */
+>>>>>>> 76ef6146e8d2d2f6940a703bd82ab795c799fc7b
   .links-dropdown {
     position: absolute;
     top: 4rem;
