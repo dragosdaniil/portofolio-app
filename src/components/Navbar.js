@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 const PageNavbar = () => {
-  // TO DO: FIX THE WIDTH-CHANGING BUG(DELETE THE INLINE STYLE WHEN WIDTH > 992px)
+  // TO DO: FIX THE WIDTH-CHANGING BUG(
+  // IF I CHANGE THE WINDOW SIZE WHEN THE ANAVBAR IS OPEN, SHOWDROPDOWN REMAINS TRUE
   const containerRef = useRef(null);
   const linksRef = useRef(null);
   const navRef = useRef(null);
+  const [smallBar, setSmallBar] = useState(true);
   const [isSticky, setIsSticky] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -15,6 +17,17 @@ const PageNavbar = () => {
       setIsSticky(true);
     } else {
       setIsSticky(false);
+    }
+  };
+
+  const checkWidth = () => {
+    const width = window.innerWidth;
+    if (width > 992) {
+      setSmallBar(false);
+      setShowDropdown(false);
+      containerRef.current.removeAttribute("style");
+    } else {
+      setSmallBar(true);
     }
   };
 
@@ -36,6 +49,11 @@ const PageNavbar = () => {
     return window.removeEventListener("scroll", stickyBar);
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => checkWidth());
+    return window.removeEventListener("resize", checkWidth);
+  }, []);
+
   return (
     <nav className={isSticky ? "navbar sticky-navbar" : "navbar"} ref={navRef}>
       <Link to="/" className="logo">
@@ -49,7 +67,10 @@ const PageNavbar = () => {
           <FaBars />
         </button>
       </div>
-      <div className="links-container" ref={containerRef}>
+      <div
+        className={smallBar ? "links-dropdown" : "links-container"}
+        ref={containerRef}
+      >
         <ul className="links" ref={linksRef}>
           <li className="link-item">
             <Link to="/">

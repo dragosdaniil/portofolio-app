@@ -82,13 +82,13 @@ header {
   height: 5px;
   width: 10rem;
   margin: 0 auto;
-  background-color: var(--turquoise13);
+  background-color: var(--turquoise11);
 }
 
 .underline2 {
   height: 2px;
   width: 4rem;
-  background-color: var(--turquoise13);
+  background-color: var(--turquoise11);
   transition: var(--transition2);
   margin: 0 auto;
 }
@@ -159,9 +159,8 @@ header {
 
 .links-container {
   width: 40%;
-  transition: var(--transition);
   padding-right: 1.5rem;
-  height: auto;
+  height: 4rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -218,7 +217,8 @@ header {
     display: flex;
     padding: 5px;
   }
-  .links-container {
+  /* CHANGED LINKS CONTAINER TO DROPDOWN */
+  .links-dropdown {
     position: absolute;
     top: 4rem;
     height: 0;
@@ -227,6 +227,7 @@ header {
     background-color: var(--turquoise2);
     align-items: center;
     justify-content: center;
+    transition: var(--transition);
   }
 
   .links {
