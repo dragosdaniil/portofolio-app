@@ -157,14 +157,17 @@ header {
   width: 100%;
 }
 
-.links-container {
+.links-container,
+.links-dropdown {
   width: 40%;
-  transition: var(--transition);
   padding-right: 1.5rem;
   height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+.links-dropdown {
+  height: 0;
 }
 
 .links {
@@ -180,7 +183,7 @@ header {
   transition: var(--transition2);
 }
 .link-item:hover {
-  border-bottom-color: var(--turquoise12);
+  border-bottom-color: var(--turquoise10);
   border-bottom-style: solid;
   border-bottom-width: 3px;
 }
@@ -218,7 +221,7 @@ header {
     display: flex;
     padding: 5px;
   }
-  .links-container {
+  .links-dropdown {
     position: absolute;
     top: 4rem;
     height: 0;
@@ -227,6 +230,7 @@ header {
     background-color: var(--turquoise2);
     align-items: center;
     justify-content: center;
+    transition: var(--transition);
   }
 
   .links {

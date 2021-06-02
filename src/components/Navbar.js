@@ -7,8 +7,20 @@ const PageNavbar = () => {
   const containerRef = useRef(null);
   const linksRef = useRef(null);
   const navRef = useRef(null);
+  const [dropBar, setDropBar] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+
+  const checkWidth = () => {
+    const width = window.innerWidth;
+    if (width > 992) {
+      setDropBar(false);
+      setShowDropdown(false);
+      containerRef.current.removeAttribute("style");
+    } else {
+      setDropBar(true);
+    }
+  };
 
   const stickyBar = () => {
     if (window.scrollY > 250) {
@@ -36,6 +48,11 @@ const PageNavbar = () => {
     return window.removeEventListener("scroll", stickyBar);
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => checkWidth());
+    return window.removeEventListener("resize", checkWidth);
+  }, []);
+
   return (
     <nav className={isSticky ? "navbar sticky-navbar" : "navbar"} ref={navRef}>
       <Link to="/" className="logo">
@@ -49,7 +66,10 @@ const PageNavbar = () => {
           <FaBars />
         </button>
       </div>
-      <div className="links-container" ref={containerRef}>
+      <div
+        className={dropBar ? "links-dropdown" : "links-container"}
+        ref={containerRef}
+      >
         <ul className="links" ref={linksRef}>
           <li className="link-item">
             <Link to="/">
