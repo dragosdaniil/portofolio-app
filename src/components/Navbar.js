@@ -3,16 +3,11 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 const PageNavbar = () => {
-  // TO DO: FIX THE WIDTH-CHANGING BUG(
-  // IF I CHANGE THE WINDOW SIZE WHEN THE ANAVBAR IS OPEN
+  // TO DO: FIX THE WIDTH-CHANGING BUG(DELETE THE INLINE STYLE WHEN WIDTH > 992px)
   const containerRef = useRef(null);
   const linksRef = useRef(null);
   const navRef = useRef(null);
-<<<<<<< HEAD
   const [dropBar, setDropBar] = useState(false);
-=======
-  const [smallBar, setSmallBar] = useState(true);
->>>>>>> 76ef6146e8d2d2f6940a703bd82ab795c799fc7b
   const [isSticky, setIsSticky] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -32,17 +27,6 @@ const PageNavbar = () => {
       setIsSticky(true);
     } else {
       setIsSticky(false);
-    }
-  };
-
-  const checkWidth = () => {
-    const width = window.innerWidth;
-    if (width > 992) {
-      setSmallBar(false);
-      setShowDropdown(false);
-      containerRef.current.removeAttribute("style");
-    } else {
-      setSmallBar(true);
     }
   };
 
@@ -83,11 +67,7 @@ const PageNavbar = () => {
         </button>
       </div>
       <div
-<<<<<<< HEAD
         className={dropBar ? "links-dropdown" : "links-container"}
-=======
-        className={smallBar ? "links-dropdown" : "links-container"}
->>>>>>> 76ef6146e8d2d2f6940a703bd82ab795c799fc7b
         ref={containerRef}
       >
         <ul className="links" ref={linksRef}>
