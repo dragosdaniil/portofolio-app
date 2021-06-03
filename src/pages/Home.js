@@ -9,7 +9,18 @@ const Home = () => {
     <main className="page">
       <section className="main-page">
         <img src={hero.default} alt="hero" className="hero-svg" />
-        <article className="left-side"></article>
+        <article className="left-side">
+          <div className="left-side-center">
+            <h1>I'm Dragos</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum,
+              veritatis!
+            </p>
+            <Link to="/contact">
+              <button className="contact-btn btn">contact me</button>
+            </Link>
+          </div>
+        </article>
         <article className="right-side"></article>
       </section>
       <Services />

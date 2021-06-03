@@ -107,7 +107,7 @@ header {
 }
 
 .btn:hover {
-  color: var(--turquoise8);
+  color: var(--turquoise3);
 }
 
 .section-center {
@@ -253,6 +253,34 @@ header {
 
 .left-side {
   background-color: var(--turquoise16);
+  display: grid;
+  place-items: center;
+}
+.left-side-center {
+  display: grid;
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.left-side p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: var(--shadow3);
+  color: var(--turquoise12);
+}
+
+.contact-btn {
+  background-color: var(--turquoise11);
+  font-size: 1.75rem;
+  padding: 5px 10px;
+  color: var(--turquoise1);
+  border-radius: 0.4rem;
+  transition: var(--transition2);
+}
+.contact-btn:hover {
+  background-color: var(--turquoise4);
+  color: var(--turquoise11);
 }
 
 .hero-svg {
@@ -292,6 +320,11 @@ header {
   }
   .services-center {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .left-side {
+    display: block;
+    background-color: transparent;
+    z-index: 5;
   }
 }
 
