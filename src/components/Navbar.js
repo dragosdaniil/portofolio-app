@@ -49,6 +49,7 @@ const PageNavbar = () => {
   }, []);
 
   useEffect(() => {
+    checkWidth();
     window.addEventListener("resize", () => checkWidth());
     return window.removeEventListener("resize", checkWidth);
   }, []);
