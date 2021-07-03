@@ -31,6 +31,15 @@ const data = {
       projectLink: "https://simple-recipes-site.netlify.app",
     },
     {
+      description: "Simple landing page created using React",
+      image:
+        "https://images.pexels.com/photos/210574/pexels-photo-210574.jpeg?cs=srgb&dl=pexels-pixabay-210574.jpg&fm=jpg",
+      title: "bank landing page",
+      tags: ["ReactJs", "HTML", "CSS"],
+      gitLink: "https://github.com/dragosdaniil/bank-landing-page",
+      projectLink: "https://bank-landing-page.netlify.app",
+    },
+    {
       description:
         "Currently developing and Deep Learning Neural Network to detect fires and humans. The architecture used is based on the YOLOv3 algorithm. The aim of this project is to create a model light enough and accurate enough to be used on drones, as means of supporting the firefighting teams. The model is tested on both real footage of wild fires or urban fires and on a drone using Gazebo Simulator.",
       image:
