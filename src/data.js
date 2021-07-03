@@ -37,7 +37,7 @@ const data = {
       title: "bank landing page",
       tags: ["ReactJs", "HTML", "CSS"],
       gitLink: "https://github.com/dragosdaniil/bank-landing-page",
-      projectLink: "https://bank-landing-page.netlify.app",
+      projectLink: "https://bank-landing-page2.netlify.app",
     },
     {
       description:
